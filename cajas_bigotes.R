@@ -11,17 +11,24 @@ cq_par <- c(33, 32, 24, 32, 24, 33, 32, 34, 32, 33, 33, 33, 32, 33, 34)
 sc_data <- data.frame("Individual"= sc_indv, "Par"=sc_par)
 cq_data <- data.frame("Individual"=cq_indv, "Par"=cq_par)
 
+
+mypath=file.path("~", "r-studio", "plots", "calificaciones_caja.png")
+png(file=mypath)
 boxplot(sc_data
         , main="Gráfico de califaciones por estrategia"
         , xlab="Estrategia"
         , ylab="Calificación"
         , boxwex=.4)
+dev.off()
 
+mypath=file.path("~", "r-studio", "plots", "calidad_caja.png")
+png(file=mypath)
 boxplot(cq_data
         , main="Gráfico de calidad del código por estrategia"
         , xlab="Estrategia"
         , ylab="Calificación"
         , boxwex=.4)
+dev.off()
 
 median(sc_indv)
 median(sc_par)
