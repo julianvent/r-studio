@@ -32,11 +32,16 @@ boxplot(cq_data
         , boxwex=.4)
 dev.off()
 
-median(sc_indv)
-median(sc_par)
+# median(sc_indv)
+# median(sc_par)
 
 median(cq_indv)
 median(cq_par)
 
+# normalidad
+shapiro.test(sc_data$Par - sc_data$Individual)
+shapiro.test(cq_data$Par - cq_data$Individual)
+
+# La diferencia de las medianas es diferente de 0 donde a = 0.05
 wilcox.test(sc_data$Individual, sc_data$Par, paired=TRUE, alternative = "two.sided")
 wilcox.test(cq_data$Individual, cq_data$Par, paired=TRUE, alternative = "two.sided")
