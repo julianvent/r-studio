@@ -1,6 +1,8 @@
+# Calificaciones
 sc_indv <- c(65, 90, 35, 85, 45, 90, 85, 90, 90, 85, 95, 75, 70, 35, 85)
 sc_par <- c(90, 95, 70, 90, 70, 90, 90, 95, 90, 90, 95, 90, 90, 90, 95)
 
+# Calidad del código
 cq_indv <- c(32, 31, 10, 18, 14, 30, 34, 32, 34, 30, 31, 24, 24, 15, 29)
 cq_par <- c(33, 32, 24, 32, 24, 33, 32, 34, 32, 33, 33, 33, 32, 33, 34)
 
@@ -26,7 +28,7 @@ png(file=mypath)
 boxplot(cq_data
         , main="Gráfico de calidad del código por estrategia"
         , xlab="Estrategia"
-        , ylab="Calificación"
+        , ylab="Puntaje de calidad"
         , boxwex=.4)
 dev.off()
 
