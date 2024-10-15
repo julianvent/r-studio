@@ -13,21 +13,25 @@ cq_data <- data.frame("Individual"=cq_indv, "Par"=cq_par)
 
 
 mypath=file.path("~", "r-studio", "plots", "calificaciones_caja.png")
-png(file=mypath)
+png(file=mypath, width=600, height=500)
 boxplot(sc_data
         , main="Gráfico de califaciones por estrategia"
         , xlab="Estrategia"
         , ylab="Calificación"
-        , boxwex=.4)
+        , boxwex=.4
+        , col=rgb(24/255, 82/255, 157/255)
+        )
 dev.off()
 
 mypath=file.path("~", "r-studio", "plots", "calidad_caja.png")
-png(file=mypath)
+png(file=mypath, width=600, height=500)
 boxplot(cq_data
         , main="Gráfico de calidad del código por estrategia"
         , xlab="Estrategia"
-        , ylab="Calificación"
-        , boxwex=.4)
+        , ylab="Puntaje de calidad"
+        , boxwex=.4
+        , col=rgb(40/255, 173/255, 86/255)
+        )
 dev.off()
 
 median(sc_indv)
