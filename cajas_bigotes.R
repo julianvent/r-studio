@@ -45,5 +45,5 @@ shapiro.test(sc_data$Par - sc_data$Individual)
 shapiro.test(cq_data$Par - cq_data$Individual)
 
 # La diferencia de las medianas es mayor que 0 donde a = 0.05
-wilcox.test(sc_data$Individual, sc_data$Par, paired=TRUE, alternative = "greater")
-wilcox.test(cq_data$Individual, cq_data$Par, paired=TRUE, alternative = "greater")
+wilcox.test(sc_data$Par, sc_data$Individual, paired=TRUE, alternative = "greater")
+wilcox.test(cq_data$Par, cq_data$Individual, paired=TRUE, alternative = "greater")
